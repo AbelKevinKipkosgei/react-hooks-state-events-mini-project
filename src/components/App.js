@@ -23,13 +23,13 @@ function App() {
   return (
     <div className="App">
       <h1>Task Manager</h1>
+      <NewTaskForm categories={CATEGORIES} onTaskFormSubmit={handleAddTask} />
       <CategoryFilter
         categories={CATEGORIES}
         selectedCategory={selectedCategory}
         onSelectCategory={setSelectedCategory}
       />
       <TaskList tasks={filteredTasks} onDeleteTask={handleDeleteTask} />
-      <NewTaskForm categories={CATEGORIES} onTaskFormSubmit={handleAddTask} />
     </div>
   );
 }
